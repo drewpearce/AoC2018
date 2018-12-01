@@ -26,3 +26,11 @@ def challenge_01_2(inputs):
 
         if inc >= len(inputs):
             inc = 0
+
+
+def challenge_02_1(inputs):
+    return None
+
+
+def challenge_02_2(inputs):
+    return None
