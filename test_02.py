@@ -1,5 +1,5 @@
 from funcs import challenge_02_1
-from funcs import challenge_02_2
+from funcs import challenge_02_2a
 from funcs import get_inputs
 
 
@@ -12,8 +12,9 @@ def test_get_inputs():
 def test_challenge_02_1():
     cases = [
         {
-            'inputs': [],
-            'result': 0
+            'inputs': ['abcdef', 'bababc', 'abbcde', 'abcccd', 'aabcdd',
+                       'abcdee', 'ababab'],
+            'result': 12
         }
     ]
 
@@ -21,11 +22,12 @@ def test_challenge_02_1():
         assert challenge_02_1(case['inputs']) == case['result']
 
 
-def test_challenge_01_2():
+def test_challenge_02_2():
     cases = [
         {
-            'inputs': [],
-            'result': 0
+            'inputs': ['abcde', 'fghij', 'klmno', 'pqrst', 'fguij', 'axcye',
+                       'wvxyz'],
+            'result': 'fgij'
         }
     ]
 
