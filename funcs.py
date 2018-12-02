@@ -41,7 +41,7 @@ def challenge_01_2(inputs):
 
 def challenge_01_2_redux(inputs):
     copy = [x for x in inputs]
-    sums = [0]
+    sums = set([0])
     current_sum = 0
 
     while True:
@@ -54,7 +54,7 @@ def challenge_01_2_redux(inputs):
         if current_sum in sums:
             return current_sum
         else:
-            sums.append(current_sum)
+            sums.add(current_sum)
 
 
 def challenge_02_1(inputs):
