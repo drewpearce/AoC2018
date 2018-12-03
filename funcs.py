@@ -85,7 +85,6 @@ def challenge_02_1(inputs):
 
 
 def challenge_02_2(inputs):
-    # passes test but errors out
     labels = {}
     for x in set(inputs):
         labels.update(
@@ -99,3 +98,11 @@ def challenge_02_2(inputs):
         return''.join([x for x in list(labels)[0] if x in list(labels)[1]])
     else:
         return None
+
+
+def challenge_03_1(inputs):
+    return False
+
+
+def challenge_03_2(inputs):
+    return False

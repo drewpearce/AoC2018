@@ -1,5 +1,5 @@
 from funcs import challenge_02_1
-from funcs import challenge_02_2a
+from funcs import challenge_02_2
 from funcs import get_inputs
 
 
