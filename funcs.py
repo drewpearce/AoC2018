@@ -151,3 +151,11 @@ def challenge_03_2(inputs):
                 grid2.append(x)
     grid2 = set(grid2)
     return([x for x in grid1 if x not in grid2][0])
+
+
+def challenge_04_1(inputs):
+    return None
+
+
+def challenge_04_2(inputs):
+    return None
