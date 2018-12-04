@@ -209,3 +209,11 @@ def challenge_04_2(inputs):
     guard = mode_counts[0][0]
     minute = modes[guard]
     return int(guard) * int(minute)
+
+
+def challenge_05_1(inputs):
+    return None
+
+
+def challenge_05_2(inputs):
+    return None
