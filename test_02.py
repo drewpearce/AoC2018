@@ -1,12 +1,5 @@
 from funcs import challenge_02_1
 from funcs import challenge_02_2
-from funcs import get_inputs
-
-
-def test_get_inputs():
-    inputs = get_inputs('day_02.txt')
-    for x in inputs:
-        assert isinstance(x, int)
 
 
 def test_challenge_02_1():

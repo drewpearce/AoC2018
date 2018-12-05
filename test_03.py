@@ -4,12 +4,6 @@ from funcs import get_inputs_str
 from funcs import load_claim
 
 
-def test_get_inputs():
-    inputs = get_inputs_str('day_03.txt')
-    for x in inputs:
-        assert isinstance(x, int)
-
-
 def test_load_claim():
     cases = [
         {
