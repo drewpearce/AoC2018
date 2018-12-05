@@ -1,5 +1,7 @@
+import re
 from statistics import mode
 from statistics import StatisticsError
+import string
 import time
 
 
@@ -25,6 +27,13 @@ def get_inputs_str(filename):
     with open(filename, 'r') as f:
         for line in f:
             inputs.append(line.rstrip('\n'))
+
+    return inputs
+
+
+def get_inputs_single_str(filename):
+    with open(filename, 'r') as f:
+        inputs = f.read()
 
     return inputs
 
@@ -211,9 +220,33 @@ def challenge_04_2(inputs):
     return int(guard) * int(minute)
 
 
+def generate_regex():
+    doubles = []
+    for ltr in string.ascii_lowercase:
+        doubles.append(ltr + ltr.upper())
+        doubles.append(ltr.upper() + ltr)
+
+    return '|'.join(doubles)
+
+
 def challenge_05_1(inputs):
-    return None
+    reg = generate_regex()
+    matches = True
+    while matches:
+        match = re.subn(reg, '', inputs)
+        if match[0] != inputs:
+            inputs = match[0]
+        else:
+            matches = False
+    return len(inputs)
 
 
 def challenge_05_2(inputs):
-    return None
+    results = []
+    for ltr in string.ascii_lowercase:
+        if ltr in inputs or ltr.upper() in inputs:
+            repl = inputs.replace(ltr, '')
+            repl = repl.replace(ltr.upper(), '')
+            results.append(challenge_05_1(repl))
+
+    return sorted(results)[0]
