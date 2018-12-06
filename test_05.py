@@ -1,5 +1,7 @@
 from funcs import challenge_05_1
+from funcs import challenge_05_1_redux
 from funcs import challenge_05_2
+from funcs import challenge_05_2_redux
 from funcs import generate_regex
 
 
@@ -22,6 +24,18 @@ def test_challenge_05_1():
         assert challenge_05_1(case['inputs']) == case['result']
 
 
+def test_challenge_05_1_redux():
+    cases = [
+        {
+            'inputs': 'dabAcCaCBAcCcaDA',
+            'result': 10
+        }
+    ]
+
+    for case in cases:
+        assert challenge_05_1_redux(case['inputs']) == case['result']
+
+
 def test_challenge_05_2():
     cases = [
         {
@@ -32,3 +46,15 @@ def test_challenge_05_2():
 
     for case in cases:
         assert challenge_05_2(case['inputs']) == case['result']
+
+
+def test_challenge_05_2_reduz():
+    cases = [
+        {
+            'inputs': 'dabAcCaCBAcCcaDA',
+            'result': 4
+        }
+    ]
+
+    for case in cases:
+        assert challenge_05_2_redux(case['inputs']) == case['result']
