@@ -284,3 +284,11 @@ def challenge_05_2_redux(inputs):
             results.append(challenge_05_1_redux(repl))
 
     return sorted(results)[0]
+
+
+def challenge_06_1(inputs):
+    return None
+
+
+def challenge_06_2(inputs):
+    return None
