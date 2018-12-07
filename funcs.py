@@ -346,3 +346,11 @@ def challenge_06_2(inputs, max_distance):
     ]
 
     return len(matches)
+
+
+def challenge_07_1(inputs):
+    return None
+
+
+def challenge_07_2(inputs):
+    return None
