@@ -1,6 +1,5 @@
 from funcs import challenge_03_1
 from funcs import challenge_03_2
-from funcs import get_inputs_str
 from funcs import load_claim
 
 

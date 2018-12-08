@@ -70,7 +70,7 @@ def challenge_01_2_redux(inputs):
     while True:
         try:
             current_sum += copy.pop(0)
-        except:
+        except Exception:
             copy = [x for x in inputs]
             current_sum += copy.pop(0)
 
@@ -102,7 +102,9 @@ def challenge_02_2(inputs):
     for x in set(inputs):
         labels.update(
             {
-                x: {sum(1 for z in range(0, len(x)) if x[z] != y[z]): y for y in set(inputs) if sum(1 for z in range(0, len(x)) if x[z] != y[z]) == 1}
+                x: {sum(1 for z in range(0, len(x)) if x[z] != y[z]): y
+                    for y in set(inputs)
+                    if sum(1 for z in range(0, len(x)) if x[z] != y[z]) == 1}
             }
         )
 
@@ -172,7 +174,7 @@ def get_guard_data(inputs):
     id = ''
     sleep = 0
     for item in inputs:
-        splits = item.split(' ')                
+        splits = item.split(' ')
         time = splits[1][3:-1]
         if splits[2] == 'Guard':
             id = splits[3][1:]
@@ -321,14 +323,16 @@ def challenge_06_1(inputs):
         else:
             all_coords[coord] = distances[0]['label']
 
-    infinites = set([v for k, v 
+    infinites = set([v for k, v
                     in all_coords.items()
                     if k[0] == max_grid
                     or k[1] == max_grid
                     or k[0] == 0
                     or k[1] == 0])
 
-    areas = [{'label': k, 'area': len([x for x, v in all_coords.items() if v == k])} for k in locs.keys() if k not in infinites]
+    areas = [{'label': k, 'area': len(
+             [x for x, v in all_coords.items() if v == k])}
+             for k in locs.keys() if k not in infinites]
 
     return sorted(areas, key=lambda k: k['area'], reverse=True)[0]['area']
 

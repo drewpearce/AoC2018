@@ -86,4 +86,5 @@ def test_challenge_07_2():
     ]
 
     for case in cases:
-        assert challenge_07_2(case['inputs'], case['w'], case['mod']) == case['result']
+        test = challenge_07_2(case['inputs'], case['w'], case['mod'])
+        assert test == case['result']

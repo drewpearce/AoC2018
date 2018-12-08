@@ -1,6 +1,5 @@
 from funcs import challenge_06_1
 from funcs import challenge_06_2
-from funcs import get_inputs
 from funcs import get_inputs_str
 from funcs import log_runtime
 from funcs import now_ms
