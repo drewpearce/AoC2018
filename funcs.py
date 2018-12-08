@@ -415,3 +415,11 @@ def challenge_07_2(inputs, workers, time_mod):
                 out.append(x)
         time += 1
     return time -1
+
+
+def challenge_08_1(inputs):
+    return None
+
+
+def challenge_08_2(inputs):
+    return None
