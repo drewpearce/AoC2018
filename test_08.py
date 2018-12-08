@@ -5,8 +5,8 @@ from funcs import challenge_08_2
 def test_challenge_08_1():
     cases = [
         {
-            'inputs': [],
-            'result': True
+            'inputs': '2 3 0 3 10 11 12 1 1 0 1 99 2 1 1 2',
+            'result': 138
         }
     ]
 
@@ -17,8 +17,8 @@ def test_challenge_08_1():
 def test_challenge_08_2():
     cases = [
         {
-            'inputs': [],
-            'result': True
+            'inputs': '2 3 0 3 10 11 12 1 1 0 1 99 2 1 1 2',
+            'result': 66
         }
     ]
 
