@@ -1,5 +1,4 @@
 from funcs import challenge_09_1
-from funcs import challenge_09_2
 
 
 def test_challenge_09_1():
