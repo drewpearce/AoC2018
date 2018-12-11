@@ -9,17 +9,8 @@ import sys
 DAY_NUM = sys.argv[1]  # provide day number as cmd line argument
 DAY = 'day_' + DAY_NUM
 PATH = os.path.abspath(os.path.dirname(__file__)) + '/'
-NEW_common = '''
-
-def challenge_{DAY}_1(inputs):
-    return None
-
-
-def challenge_{DAY}_2(inputs):
-    return None
-'''
-NEW_TESTS = '''from common import challenge_{DAY}_1
-from common import challenge_{DAY}_2
+NEW_TESTS = '''from day_{DAY} import challenge_{DAY}_1
+from day_{DAY} import challenge_{DAY}_2
 
 
 def test_challenge_{DAY}_1():
@@ -45,12 +36,19 @@ def test_challenge_{DAY}_2():
     for case in cases:
         assert challenge_{DAY}_2(case['inputs']) == case['result']
 '''
-NEW_RUN = '''from common import challenge_{DAY}_1
-from common import challenge_{DAY}_2
-from common import get_inputs
+NEW_RUN = '''from common import get_inputs
 from common import get_inputs_str
+from common import get_input_single_str
 from common import log_runtime
 from common import now_ms
+
+
+def challenge_{DAY}_1(inputs):
+    return None
+
+
+def challenge_{DAY}_2(inputs):
+    return None
 
 
 inputs = get_inputs('day_{DAY}.txt')
@@ -70,11 +68,6 @@ def write_text_file():
         f.write('')
 
 
-def append_new_common():
-    with open(PATH + 'common.py', 'a') as f:
-        f.write(NEW_common.replace('{DAY}', DAY_NUM))
-
-
 def write_test_file():
     with open(PATH + 'test_' + DAY_NUM + '.py', 'w') as f:
         f.write(NEW_TESTS.replace('{DAY}', DAY_NUM))
@@ -87,8 +80,6 @@ def write_run_file():
 
 print('Writing text file...')
 write_text_file()
-print('Appending new functions...')
-append_new_common()
 print('Writing test file...')
 write_test_file()
 print('Writing run file...')
