@@ -1,6 +1,6 @@
-from funcs import challenge_06_1
-from funcs import challenge_06_2
-from funcs import get_manhattan_distance
+from day_06 import challenge_06_1
+from day_06 import challenge_06_2
+from day_06 import get_manhattan_distance
 
 
 def test_get_manhattan_distance():

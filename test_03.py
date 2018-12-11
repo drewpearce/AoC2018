@@ -1,6 +1,6 @@
-from funcs import challenge_03_1
-from funcs import challenge_03_2
-from funcs import load_claim
+from day_03 import challenge_03_1
+from day_03 import challenge_03_2
+from day_03 import load_claim
 
 
 def test_load_claim():

@@ -1,8 +1,8 @@
-from funcs import challenge_05_1
-from funcs import challenge_05_1_redux
-from funcs import challenge_05_2
-from funcs import challenge_05_2_redux
-from funcs import generate_regex
+from day_05 import challenge_05_1
+from day_05 import challenge_05_1_redux
+from day_05 import challenge_05_2
+from day_05 import challenge_05_2_redux
+from day_05 import generate_regex
 
 
 def test_generate_regex():

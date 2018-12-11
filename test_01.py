@@ -1,7 +1,7 @@
-from funcs import challenge_01_1
-from funcs import challenge_01_2
-from funcs import challenge_01_2_redux
-from funcs import get_inputs
+from common import get_inputs
+from day_01 import challenge_01_1
+from day_01 import challenge_01_2
+from day_01 import challenge_01_2_redux
 
 
 def test_get_inputs():

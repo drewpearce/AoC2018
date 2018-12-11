@@ -1,4 +1,4 @@
-from funcs import challenge_09_1
+from day_09 import challenge_09_1
 
 
 def test_challenge_09_1():

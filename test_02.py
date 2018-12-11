@@ -1,5 +1,5 @@
-from funcs import challenge_02_1
-from funcs import challenge_02_2
+from day_02 import challenge_02_1
+from day_02 import challenge_02_2
 
 
 def test_challenge_02_1():

@@ -1,6 +1,6 @@
-from funcs import challenge_07_1
-from funcs import challenge_07_2
-from funcs import parse_challenge_07_inputs
+from day_07 import challenge_07_1
+from day_07 import challenge_07_2
+from day_07 import parse_challenge_07_inputs
 
 
 def test_parse_challenge_07_inputs():
