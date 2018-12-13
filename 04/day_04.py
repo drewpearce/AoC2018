@@ -1,6 +1,3 @@
-from common import get_inputs_str
-from common import log_runtime
-from common import now_ms
 from statistics import mode
 from statistics import StatisticsError
 
@@ -60,14 +57,3 @@ def challenge_04_2(inputs):
     guard = mode_counts[0][0]
     minute = modes[guard]
     return int(guard) * int(minute)
-
-
-inputs = get_inputs_str('day_04.txt')
-
-start_ms = now_ms()
-print('Challenge 1 results: {}'.format(challenge_04_1(inputs)))
-log_runtime(start_ms)
-
-star_ms = now_ms()
-print('Challenge 2 results: {}'.format(challenge_04_2(inputs)))
-log_runtime(start_ms)

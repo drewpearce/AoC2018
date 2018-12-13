@@ -1,8 +1,3 @@
-from common import get_inputs_str
-from common import log_runtime
-from common import now_ms
-
-
 def load_claim(text):
     chunks = text.split(' ')
     loc = chunks[2][0:-1]
@@ -54,14 +49,3 @@ def challenge_03_2(inputs):
                 grid2.append(x)
     grid2 = set(grid2)
     return([x for x in grid1 if x not in grid2][0])
-
-
-inputs = get_inputs_str('day_03.txt')
-
-start_ms = now_ms()
-print('Challenge 1 result: {}'.format(challenge_03_1(inputs)))
-log_runtime(start_ms)
-
-start_ms = now_ms()
-print('Challenge 2 result: {}'.format(challenge_03_2(inputs)))
-log_runtime(start_ms)
