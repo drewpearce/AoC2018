@@ -8,7 +8,7 @@ import sys
 
 DAY_NUM = sys.argv[1]  # provide day number as cmd line argument
 DAY = 'day_' + DAY_NUM
-PATH = os.path.abspath(os.path.dirname(__file__)) + '/'
+PATH = os.path.abspath(os.path.dirname(__file__)) + '/' + DAY_NUM + '/'
 NEW_TESTS = '''from day_{DAY} import challenge_{DAY}_1
 from day_{DAY} import challenge_{DAY}_2
 
@@ -41,6 +41,8 @@ from common import get_inputs_str
 from common import get_input_single_str
 from common import log_runtime
 from common import now_ms
+from day_{DAY} import challenge_{DAY}_1
+from day_{DAY} import challenge_{DAY}_2
 
 
 def challenge_{DAY}_1(inputs):
@@ -61,6 +63,13 @@ star_ms = now_ms()
 print('Challenge 2 results: {}'.format(challenge_{DAY}_2(inputs)))
 log_runtime(start_ms)
 '''
+NEW_DAY = '''def challenge_{DAY}_1():
+    return None
+
+
+def challenge_{DAY}_2():
+    return None
+'''
 
 
 def write_text_file():
@@ -74,13 +83,23 @@ def write_test_file():
 
 
 def write_run_file():
-    with open(PATH + DAY + '.py', 'w') as f:
+    with open(PATH + 'run.py', 'w') as f:
         f.write(NEW_RUN.replace('{DAY}', DAY_NUM))
 
 
+def write_day_file():
+    with open(PATH + DAY + '.py', 'w') as f:
+        f.write(NEW_DAY.replace('{DAY}', DAY_NUM))
+
+print('Making dir...')
+os.mkdir(PATH)
+print('Linking common.py...')
+os.symlink('../common.py', PATH + 'common.py')
 print('Writing text file...')
 write_text_file()
 print('Writing test file...')
 write_test_file()
+print('Writing day file...')
+write_day_file()
 print('Writing run file...')
 write_run_file()
