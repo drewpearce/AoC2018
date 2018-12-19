@@ -5,8 +5,15 @@ from day_13 import challenge_13_2
 def test_challenge_13_1():
     cases = [
         {
-            'inputs': [],
-            'result': True
+            'inputs': [
+                '/->-\        ',
+                '|   |  /----\\',
+                '| /-+--+-\  |',
+                '| | |  X v  |',
+                '\-+-/  \-+--/',
+                '  \------/   '
+            ],
+            'result': (7, 3)
         }
     ]
 
@@ -17,8 +24,16 @@ def test_challenge_13_1():
 def test_challenge_13_2():
     cases = [
         {
-            'inputs': [],
-            'result': True
+            'inputs': [
+                '/>-<\  ',
+                '|   |  ',
+                '| /<+-\\',
+                '| | | v',
+                '\>+</ |',
+                '  |   ^',
+                '  \<->/'
+            ],
+            'result': (6, 5)
         }
     ]
 
