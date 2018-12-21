@@ -45,14 +45,6 @@ from day_{DAY} import challenge_{DAY}_1
 from day_{DAY} import challenge_{DAY}_2
 
 
-def challenge_{DAY}_1(inputs):
-    return None
-
-
-def challenge_{DAY}_2(inputs):
-    return None
-
-
 inputs = get_inputs('day_{DAY}.txt')
 
 start_ms = now_ms()
